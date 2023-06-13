@@ -5,4 +5,7 @@
 f9aa3d4484c7cfaf5d6f7c58b179029a36959e3df3cb17cb671ff95053546691
 ➜  k8s101 git:(main) ✗ curl 127.0.0.1:8080/localhost/healthz
 访问成功%
+➜  ~ docker inspect -f '{{.State.Pid}}' f9aa3d4484c7
+5333
+➜  ~ nsenter -t5333 -n ip addr
 ```
