@@ -6,7 +6,7 @@ spec:
   hostNetwork: true
   containers:
     - name: http-probe
-      image: httpserver:v3
+      image: httpserver:v6
       readinessProbe:
         httpGet:
           ### this probe will fail with 404 error code
