@@ -7,12 +7,19 @@ spec:
   containers:
     - name: http-probe
       image: httpserver:v6
+      resources:
+        limits:
+          memory: 800Mi
+        requests:
+          memory: 500Mi
       readinessProbe:
         httpGet:
           ### this probe will fail with 404 error code
           ### only httpcode between 200-400 is retreated as success
-          path: /localhost/healthz 
+          path: /localhost/healthz
           port: 8080
         initialDelaySeconds: 30
         periodSeconds: 5
         successThreshold: 2
+status:
+  qosClass: Burstable
