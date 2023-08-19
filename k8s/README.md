@@ -1,7 +1,7 @@
 ```bash
-admin:~/repo/k8s101/k8s# kubectl apply -f graceful-start.ymal
+admin:~/repo/k8s101/k8s# kubectl apply -f graceful-start.yaml
 pod/httpserver-probe created
-admin:~/repo/k8s101/k8s# kubectl apply -f service.ymal
+admin:~/repo/k8s101/k8s# kubectl apply -f service.yaml
 service/httpserver-basic created
 admin:~/repo/k8s101/k8s# kubectl get pod |grep httpserver-probe
 httpserver-probe                    1/1     Running   0          5m35s
